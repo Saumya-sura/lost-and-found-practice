@@ -28,10 +28,10 @@ class MyApp extends StatelessWidget {
         primaryTextTheme: GoogleFonts.latoTextTheme(),
         brightness: Brightness.light
       ),
-     
+      
       routes: {
         "/":(context) => Login(),
-        MyRoutes.homeRoute:(context) => homepage(),
+       MyRoutes.homeRoute:(context) => homepage(),
         MyRoutes.loginRoute:(context) => Login(),
         
       },
