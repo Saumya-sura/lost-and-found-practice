@@ -1,7 +1,18 @@
+<!DOCTYPE html>
 {% extends "base.html" %}
-{% block title %}View All Users {% endblock %}
+
 {% block content %}
-    {% for item in values %}
-        <p>Name : {{item.name}} , Task : {{item.task}} </p>
-    {% endfor %}
+<h1>Todo List</h1>
+<ul>
+  {% for todo in todos %}
+    <li>{{ todo }}</li>
+  {% endfor %}
+</ul>
+
+<form method="POST" action="/add">
+  <label for="new_todo">Add a new todo:</label>
+  <input type="text" name="new_todo" id="new_todo">
+  <button type="submit">Add</button>
+</form>
+
 {% endblock %}
